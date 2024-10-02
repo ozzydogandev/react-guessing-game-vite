@@ -46,7 +46,10 @@ function NumberGuessingGame(){
             numberToGuess={numberToGuess}
             numberOfGuesses={numberOfGuesses}
           />
-          <GuessControl onGuess={handleGuess} />
+          <GuessControl 
+          onGuess={handleGuess}
+          disabled={numberOfGuesses >= MAX_GUESSES}
+           />
           <p>Guesses left: {MAX_GUESSES - numberOfGuesses}</p>
         </>
       ) : (
